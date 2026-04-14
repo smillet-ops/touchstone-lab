@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelly Millet | Touchstone Lab</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Space+Mono&display=swap" rel="stylesheet">
 </head>
 <body class="main-view">
 
-    <nav class="nav-bar hidden" id="back-nav">
-        <a href="#" onclick="showView('main')" class="back-link">← BACK TO TOUCHSTONE</a>
+    <nav id="back-nav" class="nav-bar hidden">
+        <a href="#" onclick="showView('main'); return false;" class="back-link">← BACK TO TOUCHSTONE</a>
     </nav>
 
-    <header class="lab-header view" id="main-header">
+    <header class="lab-header" id="main-header">
         <div class="system-meta">
             <span>[VERSION]: 3.0</span>
             <span>[PIVOT]: SOVEREIGN ALGORITHM</span>
@@ -94,6 +94,6 @@
         <p>Built by smillet-ops | Touchstone v3.0</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

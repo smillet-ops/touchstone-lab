@@ -1,23 +1,38 @@
+/**
+ * TOUCHSTONE LAB v3.0 - NAVIGATION LOGIC
+ */
+
 function showView(viewId) {
-    // Hide all views
-    document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+    console.log("Switching to view:", viewId);
     
-    // Determine which parts to show
+    // 1. Select all elements with the 'view' class
+    const views = document.querySelectorAll('.view');
+    const backNav = document.getElementById('back-nav');
+    const mainHeader = document.getElementById('main-header');
+
+    // 2. Hide everything first
+    views.forEach(v => v.classList.add('hidden'));
+
+    // 3. Show the requested view and conditional elements
     if (viewId === 'main') {
-        document.getElementById('main-header').classList.remove('hidden');
         document.getElementById('main-view').classList.remove('hidden');
-        document.getElementById('back-nav').classList.add('hidden');
+        mainHeader.classList.remove('hidden');
+        backNav.classList.add('hidden');
     } else {
-        document.getElementById(viewId).classList.remove('hidden');
-        document.getElementById('back-nav').classList.remove('hidden');
+        const targetView = document.getElementById(viewId);
+        if (targetView) {
+            targetView.classList.remove('hidden');
+            backNav.classList.remove('hidden');
+            // Keep header hidden for detail views to focus on content
+            mainHeader.classList.add('hidden');
+        }
     }
-    
-    // Scroll to top
-    window.scrollTo(0,0);
+
+    // 4. Scroll to top for a clean transition
+    window.scrollTo(0, 0);
 }
 
-// Ensure lab initializes to main view
-window.onload = () => {
+// Ensure the page starts correctly
+document.addEventListener('DOMContentLoaded', () => {
     showView('main');
-    console.log("Touchstone Lab v3.0: All views loaded.");
-};
+});

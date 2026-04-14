@@ -1,36 +1,120 @@
-/* Keep your existing styles and add these at the bottom */
+/* RESET & FOUNDATION */
+* { box-sizing: border-box; }
 
-.view { transition: opacity 0.3s ease; }
-.hidden { display: none !important; }
+body {
+    background-color: #fdfdfd !important; /* Force background */
+    color: #1d1d1f;
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
 
+/* NAVIGATION */
 .nav-bar {
     padding: 1.5rem 2rem;
     position: sticky;
     top: 0;
-    background: var(--bg);
-    z-index: 100;
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    z-index: 1000;
 }
 
 .back-link {
-    font-family: var(--mono);
+    font-family: 'Space Mono', monospace;
     text-decoration: none;
-    color: var(--signal);
+    color: #ff3b30;
     font-weight: bold;
     font-size: 0.8rem;
 }
 
-.detail-view {
+/* HEADER */
+.lab-header {
+    padding: 5rem 2rem;
     text-align: center;
-    padding: 5rem 1rem;
-    max-width: 800px;
-    margin: 0 auto;
+    border-bottom: 1px solid #eaeaea;
+    background: #ffffff;
 }
 
-.detail-view h2 {
-    font-family: var(--mono);
-    color: var(--signal);
+.system-meta {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    color: #a1a1a6;
     margin-bottom: 2rem;
 }
 
-.priority-item, .lane { cursor: pointer; transition: transform 0.2s ease; }
-.priority-item:hover, .lane:hover { transform: translateY(-5px); border-color: var(--signal); }
+.signature-quote {
+    max-width: 600px;
+    margin: 1rem auto;
+    font-style: italic;
+    color: #6e6e73;
+}
+
+/* WORKSPACE */
+.lab-workspace {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.signal-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.priority-item, .lane {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #f2f2f2;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.priority-item:hover, .lane:hover {
+    border-color: #ff3b30;
+    transform: translateY(-5px);
+}
+
+.num {
+    font-family: 'Space Mono', monospace;
+    color: #ff3b30;
+    font-weight: bold;
+}
+
+/* LOGIC LANES */
+.logic-lanes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.lane h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+    padding-bottom: 0.5rem;
+}
+
+/* VIEW MANAGEMENT */
+.view { display: block; }
+.hidden { display: none !important; }
+
+.detail-view {
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.lab-footer {
+    padding: 4rem;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    opacity: 0.4;
+}
