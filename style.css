@@ -1,0 +1,36 @@
+/* Keep your existing styles and add these at the bottom */
+
+.view { transition: opacity 0.3s ease; }
+.hidden { display: none !important; }
+
+.nav-bar {
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 100;
+}
+
+.back-link {
+    font-family: var(--mono);
+    text-decoration: none;
+    color: var(--signal);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.detail-view {
+    text-align: center;
+    padding: 5rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.detail-view h2 {
+    font-family: var(--mono);
+    color: var(--signal);
+    margin-bottom: 2rem;
+}
+
+.priority-item, .lane { cursor: pointer; transition: transform 0.2s ease; }
+.priority-item:hover, .lane:hover { transform: translateY(-5px); border-color: var(--signal); }

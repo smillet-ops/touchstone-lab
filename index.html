@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelly Millet | Touchstone Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body class="main-view">
+
+    <nav class="nav-bar hidden" id="back-nav">
+        <a href="#" onclick="showView('main')" class="back-link">← BACK TO TOUCHSTONE</a>
+    </nav>
+
+    <header class="lab-header view" id="main-header">
+        <div class="system-meta">
+            <span>[VERSION]: 3.0</span>
+            <span>[PIVOT]: SOVEREIGN ALGORITHM</span>
+            <span>[STATUS]: NAVIGATING THE SHIFT</span>
+        </div>
+        <h1>Founder, The Wishbone Files & 4K9 Company</h1>
+        <p class="signature-quote">"While others see a 'mess' of complexity, I provide myself the 'clarity' that makes the machine actually work."</p>
+    </header>
+
+    <main class="lab-workspace">
+        
+        <section id="main-view" class="view">
+            <div class="label">CORE: THE SIGNAL FIRE</div>
+            <div class="signal-display">
+                <div class="priority-item active" onclick="showView('signal-01')">
+                    <span class="num">01</span>
+                    <p>Listening for System Signal...</p>
+                </div>
+                <div class="priority-item" onclick="showView('signal-02')">
+                    <span class="num">02</span>
+                    <p>Filtering Voice Note Feed...</p>
+                </div>
+                <div class="priority-item" onclick="showView('signal-03')">
+                    <span class="num">03</span>
+                    <p>Touchstone: Is it Functional?</p>
+                </div>
+            </div>
+
+            <div class="logic-lanes">
+                <div class="lane" onclick="showView('adaptive-lab')">
+                    <h3>Adaptive Action Lab</h3>
+                    <p>Refining complexity into insights...</p>
+                </div>
+                <div class="lane" onclick="showView('wishbone-files')">
+                    <h3>The Wishbone Files</h3>
+                    <p>The human algorithm & restarts...</p>
+                </div>
+                <div class="lane" onclick="showView('catalyst')">
+                    <h3>The Catalyst</h3>
+                    <p>Strategic distancing & excellence...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="signal-01" class="view hidden detail-view">
+            <h2>01: System Signal</h2>
+            <p>Scanning the environment. This view isolates raw inputs from the 9-to-5 and personal life to detect emerging patterns before they become noise.</p>
+        </section>
+
+        <section id="signal-02" class="view hidden detail-view">
+            <h2>02: Voice Note Feed</h2>
+            <p>The bridge between thought and action. Here, Wispr Flow data is processed through the human algorithm to identify what truly rises to the top.</p>
+        </section>
+
+        <section id="signal-03" class="view hidden detail-view">
+            <h2>03: Functional Touchstone</h2>
+            <p>The final filter. If a task or thought does not provide functional clarity, it is discarded. This is the sovereignty check.</p>
+        </section>
+
+        <section id="adaptive-lab" class="view hidden detail-view">
+            <h2>Adaptive Action Lab</h2>
+            <p>My diagnostic workspace. I use this lane to co-create with AI, ensuring my professional operational expertise serves my personal growth.</p>
+        </section>
+
+        <section id="wishbone-files" class="view hidden detail-view">
+            <h2>The Wishbone Files</h2>
+            <p>The archive of 1,000 restarts. From high school dropout to owning my own algorithm. This is the legacy of 4K9 Company and the Proof of Human.</p>
+        </section>
+
+        <section id="catalyst" class="view hidden detail-view">
+            <h2>The Catalyst</h2>
+            <p>The career is the noise; my life is the signal. This is the execution engine—delivering precision work while reclaiming cognitive space.</p>
+        </section>
+
+    </main>
+
+    <footer class="lab-footer">
+        <p>Built by smillet-ops | Touchstone v3.0</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
