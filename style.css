@@ -118,3 +118,91 @@ body {
     font-size: 0.7rem;
     opacity: 0.4;
 }
+/* DIAGNOSTIC STYLING */
+.diagnostic-container {
+    background: #fff;
+    border: 2px solid var(--accent);
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: left;
+    box-shadow: 10px 10px 0px #eee;
+}
+
+.diagnostic-header {
+    font-family: var(--mono);
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.filter-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    background: #fdfdfd;
+    padding: 1.5rem;
+    border-left: 4px solid var(--signal);
+}
+
+.step-label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: #888;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.action-result {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: var(--signal);
+}
+
+.diagnostic-outcome {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #1d1d1f;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* FOOTER UPDATES */
+.footer-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: var(--signal);
+}
+
+.footer-meta {
+    margin-top: 2rem;
+}
+
+/* PROFILE PHOTO STYLING */
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Perfect circle */
+    border: 3px solid var(--accent);
+    margin: 2rem auto;
+    display: block;
+    object-fit: cover; /* Ensures the photo doesn't stretch */
+    filter: grayscale(100%); /* Fits the clean, logic-first vibe */
+    transition: filter 0.5s ease, transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    filter: grayscale(0%); /* Brings the 'Human' into color on hover */
+    transform: scale(1.05); /* Slight pop for interactivity */
+}
